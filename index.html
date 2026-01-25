@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Professional Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Inter',sans-serif;
+}
+
+body{
+    background:#000;
+    color:#fff;
+    overflow-x:hidden;
+}
+
+/* ===== SECTION ===== */
+section{
+    min-height:100vh;
+    padding:120px 20px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    opacity:0;
+    transform:translateY(60px) scale(0.96);
+    transition:1s cubic-bezier(.22,.61,.36,1);
+}
+section.show{
+    opacity:1;
+    transform:translateY(0) scale(1);
+}
+
+/* ===== HERO ===== */
+.hero img{
+    width:260px;
+    height:260px;
+    border-radius:50%;
+    object-fit:cover;
+    margin-bottom:30px;
+    box-shadow:0 30px 80px rgba(255,255,255,0.12);
+}
+
+.hero h1{
+    font-size:52px;
+    font-weight:800;
+    text-align:center;
+}
+
+.hero p{
+    margin-top:12px;
+    color:#aaa;
+    text-align:center;
+    font-size:18px;
+}
+
+/* ===== ABOUT ===== */
+.about{
+    max-width:780px;
+    text-align:center;
+    font-size:18px;
+    color:#ccc;
+    line-height:1.7;
+}
+
+/* ===== HEADINGS ===== */
+h2{
+    margin-bottom:30px;
+    font-size:36px;
+    font-weight:700;
+    color:#f5f5f5;
+}
+
+/* ===== REVEAL ANIMATION ===== */
+.reveal{
+    opacity:0;
+    transform:translateY(30px) scale(0.95);
+    transition:0.6s cubic-bezier(.22,.61,.36,1);
+}
+.reveal.show{
+    opacity:1;
+    transform:translateY(0) scale(1);
+}
+
+/* ===== CARDS ===== */
+.card{
+    background:#0b0b0b;
+    padding:32px;
+    border-radius:18px;
+    width:100%;
+    max-width:780px;
+    margin:18px 0;
+    border:1px solid #1a1a1a;
+}
+
+/* ===== SKILLS ===== */
+.skills{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+    gap:20px;
+    max-width:780px;
+    width:100%;
+}
+
+.skill{
+    padding:18px;
+    border-radius:14px;
+    background:#050505;
+    border:1px solid #1c1c1c;
+    text-align:center;
+    font-weight:600;
+    color:#ddd;
+}
+
+.skill:hover{
+    background:#0f0f0f;
+    transform:translateY(-4px);
+}
+
+/* ===== EXPERIENCE ===== */
+.exp-title{
+    font-size:21px;
+    font-weight:600;
+}
+.exp-sub{
+    color:#aaa;
+    margin-top:8px;
+}
+
+/* Experience link */
+.exp-link{
+    color:#eaeaea;
+    text-decoration:none;
+    font-weight:500;
+    margin-left:6px;
+    border-bottom:1px solid transparent;
+    transition:0.3s ease;
+}
+.exp-link:hover{
+    border-bottom:1px solid #888;
+    color:#fff;
+}
+
+/* ===== CONTACT ===== */
+.contact-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:22px;
+    max-width:780px;
+    width:100%;
+}
+
+.contact-item{
+    background:#050505;
+    border:1px solid #1a1a1a;
+    border-radius:16px;
+    padding:32px;
+    text-align:center;
+    font-size:18px;
+    color:#ddd;
+    text-decoration:none;
+}
+
+.contact-item:hover{
+    background:#0f0f0f;
+    transform:translateY(-6px);
+}
+
+/* ===== MOBILE BAR ===== */
+.mobile-bar{
+    display:none;
+    position:fixed;
+    bottom:0;
+    width:100%;
+    background:#050505;
+    padding:14px;
+    text-align:center;
+    font-weight:600;
+    border-top:1px solid #1a1a1a;
+    color:#ccc;
+}
+
+/* ===== MOBILE ===== */
+@media(max-width:768px){
+    .hero img{
+        width:190px;
+        height:190px;
+    }
+    .hero h1{font-size:36px}
+    section{padding:90px 16px}
+    .mobile-bar{display:block}
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="hero">
+    <img src="D:/new dark portfolio/profile.jpg.jpg" alt="Profile">
+    <h1>AROMAL B MADHU</h1>
+    <p>Data Scientist | AI & ML Specialist | Software Developer</p>
+</section>
+
+<!-- ABOUT -->
+<section>
+    <h2>About Me</h2>
+    <p class="about reveal">
+       I’m a passionate Data Science and AI Trainer with hands-on experience in guiding learners through real-world applications of machine learning, Python programming, data analytics, and visualization tools. I focus on breaking complex AI concepts into practical, results-driven learning experiences.
+    </p>
+</section>
+
+<!-- SKILLS -->
+<section>
+    <h2>Skills</h2>
+    <div class="skills">
+        <div class="skill reveal">Python</div>
+        <div class="skill reveal">Machine Learning</div>
+        <div class="skill reveal">Data Analysis</div>
+        <div class="skill reveal">Artificial Intelligence</div>
+        <div class="skill reveal">Prompt Engineering</div>
+        <div class="skill reveal">Generative AI</div>
+        <div class="skill reveal">Software Development</div>
+        <div class="skill reveal">Microsoft 365</div>
+    </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section>
+    <h2>Experience</h2>
+
+    <div class="card reveal">
+        <div class="exp-title">Data Science & AI Trainee</div>
+        <div class="exp-sub">KELTRON, Trivandrum</div>
+    </div>
+
+    <div class="card reveal">
+        <div class="exp-title">Data Science & AI Trainer</div>
+        <div class="exp-sub">G-TEC Computer Education, Kollam</div>
+    </div>
+
+    <div class="card reveal">
+        <div class="exp-title">SkillM@X Learning Online Learning Platform</div>
+        <div class="exp-sub">
+            Founder · 
+            <a href="https://skillmaxlearn.github.io/" target="_blank" class="exp-link">
+                Visit Platform
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section>
+    <h2>Contact</h2>
+
+    <div class="contact-grid">
+        <a class="contact-item reveal" href="https://www.linkedin.com/in/aromal-b-madhu-7ab218275" target="_blank">
+            🔗 LinkedIn
+        </a>
+        <a class="contact-item reveal" href="mailto:aromalbm07@gmail.com">
+            📧 Email
+        </a>
+        <a class="contact-item reveal" href="tel:+919496258931">
+            💬 Message
+        </a>
+    </div>
+</section>
+
+<div class="mobile-bar">Aromal B Madhu</div>
+
+<script>
+const sections=document.querySelectorAll("section");
+const sectionObserver=new IntersectionObserver(entries=>{
+    entries.forEach(e=>{
+        if(e.isIntersecting)e.target.classList.add("show");
+    });
+},{threshold:0.25});
+sections.forEach(s=>sectionObserver.observe(s));
+
+document.querySelectorAll(".reveal").forEach((el,i)=>{
+    const obs=new IntersectionObserver(entries=>{
+        if(entries[0].isIntersecting){
+            setTimeout(()=>el.classList.add("show"),i*120);
+        }
+    },{threshold:0.4});
+    obs.observe(el);
+});
+</script>
+
+</body>
+</html>
